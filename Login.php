@@ -20,22 +20,25 @@ include "kompeni.php";
             <div class="form-row" style=" margin: 30px";>
                 <div class="form-group col-md-8">
                     <label for="contoh1"> Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="Username">
+                    <input type="text" class="form-control" name="username" placeholder="Username">
                 </div>
             <br>
                 <div class="form-group col-md-8">
                     <label for="contoh2">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <input type="password" class="form-control" name="password" placeholder="Password">
                 </div>
             <br>
             </div>
                 <!--button-->
-                <button onclick="check()" type="button" class="btn btn-primary" style=" margin: 30px">Login</button>
+
+                <!-- <button onclick="check()" type="button" class="btn btn-primary" style=" margin: 30px">Login</button> -->
+                <button name="login"type="submit" class="btn btn-primary" style=" margin: 30px">Login</button>
                 </form>
-                <p style="margin-left: 30px;"> Apabila ID dan Password salah, masukkan asdf untuk id dan password</p>
+                <!-- <p style="margin-left: 30px;"> Apabila ID dan Password salah, masukkan asdf untuk id dan password</p> -->
+                <!--button end -->
             </div>        
             </div>
-            <script language = "javascript">
+           <!--  <script language = "javascript">
                 function check() {
 
 
@@ -65,7 +68,7 @@ include "kompeni.php";
         }
 
 }
-            </script>
+            </script> -->
     <?php
 include "footer.php";
 ?>

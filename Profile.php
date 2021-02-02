@@ -1,5 +1,6 @@
 <?php
 include 'session.php';
+include 'config/database.php';
 
 $id_register = $_POST["id_reg"];
 $nama_depan = $_POST["namadepan"];

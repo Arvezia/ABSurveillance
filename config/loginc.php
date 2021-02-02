@@ -1,26 +1,25 @@
 <?php 
 session_start();
-require_once 'koneksic.php'; // panggil perintah koneksi database 
-
-if(!isset($_SESSION['urName'] )== 0) { // cek session apakah kosong(belum login) maka alihkan ke login.php
-    header('Location: ../Main.php');
+require_once 'koneksic.php'; 
+if(!isset($_SESSION['username'] )== 0) { 
+    header('Location: ../Default.php');
 }
 
-if(isset($_POST['login'])) { // mengecek apakah form pada login.php variabelnya ada isinya
-    $username = $_POST['urName']; // isi varibel dengan mengambil data username pada form
-    $password = $_POST['uPW'];
+if(isset($_POST['login'])) { 
+    $username = $_POST['username']; 
+    $password = $_POST['password'];
     echo $username;
-    echo $password; // isi variabel dengan mengambil data password pada form
+    echo $password; 
 
     try {
-        $sql = "SELECT * FROM `user_info` WHERE urName = ? AND uPW = SHA1(?)"; // buat queri select
+        $sql = "SELECT * FROM `user_info` WHERE username = ? AND password = SHA1(?)";
         $q = $database_connection->prepare($sql);
-        $q->execute([$username, $password]); // jalankan query
+        $q->execute([$username, $password]); 
 
-        $count = $q->rowCount(); // mengecek row
-        if($count == 1) { // jika rownya ada 
-            $_SESSION['urName'] = $username; // set sesion dengan variabel username
-            header("Location: ../Main.php"); // lempar variabel ke tampilan index.php
+        $count = $q->rowCount(); 
+        if($count == 1) {
+            $_SESSION['username'] = $username;
+            header("Location: ../Main.php");
             return;
         }else{
             echo "Anda tidak dapat login";

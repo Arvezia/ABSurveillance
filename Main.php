@@ -1,6 +1,7 @@
 <?php
 include "header.php";
-include 'config/masuk.php'
+include "session.php";
+include 'config/database.php';
 ?>
   <body>
       <index>
