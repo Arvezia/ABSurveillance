@@ -24,19 +24,19 @@ include 'config/database.php';
             <div class="form-row"style=" margin: 30px;">
                 <div class="form-group col-md-8">
                     <label for="contoh1"> Username</label>
-                    <input type="text" class="form-control" id="username" placeholder="Username">
+                    <input type="text" class="form-control" name="username" placeholder="Username">
                 </div>
             <br>
                 <div class="form-group col-md-8">
                     <label for="contoh2">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <input type="password" class="form-control" name="password" placeholder="Password">
                 </div>
-            <br>
+<!--             <br>
                 <div class="form-group col-md-8">
                     <label for="contoh2">Confirm Password</label>
                     <input type="password" class="form-control" id="password2" placeholder="Confirm Password">
                 </div>
-            <br>
+            <br> -->
 
             </div>
                 <!--button-->

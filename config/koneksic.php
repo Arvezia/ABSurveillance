@@ -9,7 +9,7 @@ try{
  $database_connection= new PDO("mysql:host=$database_hostname;dbname=$database_name",
  $database_username, $database_password); 
  $cek = "Koneksi Berhasil";
-  echo $cek;
+  //echo $cek;
 }catch(PDOException $x){
 die($x->getMessage());
 }

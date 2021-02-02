@@ -3,7 +3,7 @@ session_start();
 require_once 'koneksic.php'; // panggil perintah koneksi database 
 
 if(!isset($_SESSION['urName'] )== 0) { // cek session apakah kosong(belum login) maka alihkan ke login.php
-    header('Location: ../Login.php');
+    header('Location: ../Main.php');
 }
 
 if(isset($_POST['login'])) { // mengecek apakah form pada login.php variabelnya ada isinya
