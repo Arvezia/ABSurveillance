@@ -9,6 +9,11 @@ include 'config/database.php';
     <?php
 include "kompeni.php";
 ?>
+
+    <?php /* while ($row = $q->fetch()) :
+                    $id_user = $row['id_user']; */
+    
+    ?>
            <!--Login-->
                 <div class="row" style="background: #0019fc; color:#D5F3FE; margin: 30px;">
                     <div class="col-md-12">
@@ -16,7 +21,7 @@ include "kompeni.php";
                     </div>
                 </div>
         <!--form-->
-        <form action="config/loginc.php" method="POST">
+        <form action="config/loginc.php" method="POST" name="login" onsubmit="required()">
             <div class="form-row" style=" margin: 30px";>
                 <div class="form-group col-md-8">
                     <label for="contoh1"> Username</label>
@@ -38,6 +43,8 @@ include "kompeni.php";
                 <!--button end -->
             </div>        
             </div>
+
+            <script src="config/pass.js"></script>
            <!--  <script language = "javascript">
                 function check() {
 

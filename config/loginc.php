@@ -10,6 +10,7 @@ if(isset($_POST['login'])) {
     $password = $_POST['password'];
     echo $username;
     echo $password; 
+    $test = SHA1($password);
 
     try {
         $sql = "SELECT * FROM `user_info` WHERE username = ? AND password = SHA1(?)";
@@ -23,6 +24,7 @@ if(isset($_POST['login'])) {
             return;
         }else{
             echo "Anda tidak dapat login";
+            echo $test;
         }
     }
     catch(PDOException $e) {

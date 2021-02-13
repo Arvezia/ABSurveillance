@@ -2,6 +2,8 @@
 include "header.php";
 include "session.php";
 include 'config/database.php';
+/* $idreg = $_POST["username"];
+echo $idreg; */
 ?>
   <body>
       <index>
@@ -12,7 +14,8 @@ include "kompeni.php";
     <div class="row" style="background: #0019fc; margin: 30px;">
         <div class="col-md-4">
             <a href="Main.php"style="padding: 10px; color: white;">Product</a>
-            <a href="About.php"style="padding: 10px; color: white;">About</a>
+            <a href="List.php"style="padding: 10px; color: white;">List Account</a>
+            <a href="config/logout.php"style="padding: 10px; color: white;">Logout</a>
             
         </div>
         </div>

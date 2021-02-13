@@ -1,15 +1,14 @@
-// Proses Validasi Password  
-   $(document).ready(function() {
-      $('#regis').validate({
-        rules: {
-          password2: {
-            equalTo: "#password"
-          }
-        },
-        messages: {
-          password2: {
-            equalTo: "<p>Password yang Anda Masukan Tidak Sama</p>"
-          }
-        }
-      });
-    });
+function required()
+{
+var empt = document.login.password.value;
+if (empt === "")
+{
+alert("Tolong masukkan password");
+return false;
+}
+else 
+{
+alert('Selamat Datang');
+return true; 
+}
+}
